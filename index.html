@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Histology Slides | Vanderbilt University School of Medicine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search the Vanderbilt University School of Medicine Slide Library">
+    <meta name="author" content="Jared Shenson">
+
+    <!-- Styles -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/ico/favicon.ico">
+  </head>
+
+  <body>
+  
+  	<nav>
+      <div class="row-fluid">
+      	<div class="span12">
+			<input id="q" type="text" class="span12" placeholder="Search by slide number or keyword..." />
+			<button id="clear-query" class="close">&times;</button>
+			<h4 id="lesson-info"></h4>
+			<h4 id="bulk-slide-open">Open <span class="slide-num""></span> on the <a href="#" data-mode="web">Web</a> or in <a href="#" data-mode="desktop">ImageScope</a><button id="clear-checked" class="close">&times;</button></h4>
+      	</div>
+      </div>  		
+  	</nav>
+
+    <div class="container">
+<!--       http://digitalmicro.mc.vanderbilt.edu/BulkAction.php?Command=BulkImageScopeView&ImageIds[]=1518&ImageIds[]=1559 -->
+	  <div id="lessons-container" class="row-fluid">
+	  		<div class="span1">
+	  			<h6 class="boxed-label">Lessons</h6>
+	  		</div>
+	  		<div id="lessons" class="span11"></div>
+	  </div>
+
+	  <div id="results-container" class="row-fluid">
+	  		<div class="span1">
+				<h6 class="boxed-label">Slides</h6>
+	  		</div>
+	        <div id="results" class="span11"></div>
+	  </div>
+	  
+	  <div id="copyright" class="row-fluid">
+	  	<h6>A project by <a href="http://jaredshenson.com" target="_blank">Jared Shenson</a>. &copy; 2012</h6>
+	  </div>
+
+    </div> <!-- /container -->
+    
+    <div id="scroll-top">
+    	<i class="icon-arrow-up icon-white"></i>
+    </div>
+
+    <!-- Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="./js/underscore.min.js"></script>
+    <script src="./js/json2.js"></script>    
+    <script src="./js/backbone.min.js"></script> 
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.lazyload.min.js"></script>
+    <script src="./js/slides.js"></script>
+    <script src="./js/cl.js"></script>
+    <script type="text/template" id="lesson-template">
+		<h4><%= lesson.name %></h4>
+		<p class="desc toggle"><%= lesson.description %></p>
+		<p class="show-slides toggle"><a href="<% print(ROOT + "#!\/lesson/" + lesson.id) %>">Show <%= lesson.slides.length %> slides</a></p>
+		<p class="toggle-all-slides toggle"><a href="#">Select all <%= lesson.slides.length %> slides</a></p>
+    </script>
+    <script type="text/template" id="slide-template">
+  		<div class="span4 boxed slide-img">
+  			<% if(init){ %>
+      			<img src="<%= slide.thumb %>" data-original="<%= slide.thumb %>" />	      			
+  			<% } else { %>
+      			<img src="./img/grey.gif" data-original="<%= slide.thumb %>" />
+      		<% } %>
+  		</div>
+  		<div class="span8 boxed slide-text">
+  			<div class="row-fluid">
+  				<div class="span4 slide-meta">
+      				<div class="slide-check">
+      					<input type="checkbox" />
+      				</div>      				
+  					<h6><a name="<%= slide.number %>" class="slide-link">Slide Number</a></h6>
+  					<h1><%= slide.number %></h1>
+  					<% if(slide.tissue){ %>
+      					<h6>Tissue</h6>
+      					<h4><%= slide.tissue %></h4>
+      				<% } %>
+      				<% if(slide.stain){ %>
+      					<h6>Stain</h6>
+      					<h4><%= slide.stain %></h4>
+      				<% } %>
+  					<div class="btn-group slide-open-btns">
+  						<a href="<%= slide.links.web %>" target="_blank" class="btn btn-small">Web</a>
+  						<a href="<%= slide.links.desktop %>" target="_blank" class="btn btn-small">ImageScope</a>
+  					</div>				
+  				</div>
+  				<div class="span8 slide-desc">
+  					<% if(slide.description){ %>
+      					<h6>Description</h6>
+	      				<p><%= slide.description %></p>
+	      			<% } %>
+      				<div class="row-fluid slide-links">
+      					<div class="span6">
+      						<% if(slide.lessons){ %>
+	      						<h6>Course</h6>
+		      					<h5><a href="#<%= slide.number %>">Molecular Foundations of Medicine</a></h5>
+		      				<% } %>
+      					</div>
+      					<div class="span6">
+      						<% if(slide.lessons){ %>
+	      						<h6>Lesson</h6>
+		      					<h5><a href="<% print(ROOT + "#!\/lesson/" + slide.lessons[0].id) %>"><%= _(slide.lessons).pluck('name')[0] %></a></h5>
+		      				<% } %>
+      					</div>
+      				</div>
+  				</div>
+  			</div>
+  		</div>
+    </script>
+    <script src="./js/app.js"></script>
+
+</body></html>
