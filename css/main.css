@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Entypo Social';
+  src: url('../assets/entypo-social.eot');
+  src: local('?'),
+    url("../assets/entypo-social.woff") format("woff");
+}
+@font-face {
+  font-family: 'Entypo';
+  src: url('../assets/entypo.eot');
+  src: local('?'),
+    url("../assets/entypo.woff") format("woff");
+} 
+
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
@@ -63,7 +76,9 @@ textarea {
 
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 24px/44px "Gentium Basic", Georgia, serif;
+	font-style: normal;
+	font-weight: 400;    
 }
 
 
@@ -89,6 +104,10 @@ body {
 	transition: all 0.3s ease-in;	
 }
 
+#web-presence {
+	text-align: center;
+}
+
 /* ==========================================================================
    Styling
    ========================================================================== */
@@ -103,53 +122,45 @@ body {
 	letter-spacing: 3px;
 }
 
-p {
-	font-size: 24px;
-	line-height: 44px;
-	font-style: normal;
-	font-weight: 400;
-	font-family: "Gentium Basic", Georgia, serif;
-}
-
-.fancy-tip {
-	position: relative;
+p a {
 	color: #333;
 	text-decoration: none;
 	padding-bottom: 1px;
 	border-bottom: 1px solid #4a9ef8;
+	
+	-moz-transition: border 0.3s ease-in;
+	-ms-transition: border 0.3s ease-in;
+	-o-transition: border 0.3s ease-in;
+	-webkit-transition: border 0.3s ease-in;
+	transition: border 0.3s ease-in;	
 }
-.fancy-tip:hover {
+p a:hover {
 	border-bottom-color: #b0d6ff;
 }
 
-.fancy-tip .tip {
-	display: none;
+#web-presence a {
+	font-family: "Entypo";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 58px;
+	line-height: 18px;
+	border: none;
+	padding: 0 5px
 }
-.fancy-tip:hover .tip {
-	display: block;
-	position: absolute;
-	top: -24px;
-	left: -4px;
-	background: #4a9ef8;
-	padding: 4px 3px 3px;
+#web-presence a.social {
+	font-family: "Entypo Social";
+}
+#web-presence a:hover {
+	color: #4a9ef8;
+}
+#web-presence a:active {
+	color: #b0d6ff;
+}
+
+footer p {
 	font-size: 16px;
-	line-height: 16px;
 	text-align: center;
-	color: white;
-	
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;	
-}
-
-.tip.bs {
-	 width: 184px;
-}
-
-.tip.md {
-	 width: 426px;
+	color: #888;
 }
 
 /* ==========================================================================
@@ -164,6 +175,7 @@ p {
 	
 	#hero {
 		background-size: 190px;
+		margin-top: 40px;
 		padding-top: 70px;
 	}	
 }
