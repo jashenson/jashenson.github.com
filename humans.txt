@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jared Shenson -- Designer, Developer -- @jashenson
 
 # THANKS
 
-    <name>
+    Daniel Bruce (Entypo)
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+    Entypo
