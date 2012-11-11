@@ -77,15 +77,79 @@ body {
 }
 
 #hero {
+	margin-top: 80px;
 	background: transparent url(../img/sig.png) center top no-repeat;
 	background-size: 380px;
-	min-height: 130px;
+	padding-top: 130px;
 	
-	-moz-transition: background-size 0.3s ease-in;
-	-ms-transition: background-size 0.3s ease-in;
-	-o-transition: background-size 0.3s ease-in;
-	-webkit-transition: background-size 0.3s ease-in;
-	transition: background-size 0.3s ease-in;	
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;	
+}
+
+/* ==========================================================================
+   Styling
+   ========================================================================== */
+
+#me {
+	text-transform: uppercase;
+	font-family: "Glegoo", Helvetica Neue, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+p {
+	font-size: 24px;
+	line-height: 44px;
+	font-style: normal;
+	font-weight: 400;
+	font-family: "Gentium Basic", Georgia, serif;
+}
+
+.fancy-tip {
+	position: relative;
+	color: #333;
+	text-decoration: none;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #4a9ef8;
+}
+.fancy-tip:hover {
+	border-bottom-color: #b0d6ff;
+}
+
+.fancy-tip .tip {
+	display: none;
+}
+.fancy-tip:hover .tip {
+	display: block;
+	position: absolute;
+	top: -24px;
+	left: -4px;
+	background: #4a9ef8;
+	padding: 4px 3px 3px;
+	font-size: 16px;
+	line-height: 16px;
+	text-align: center;
+	color: white;
+	
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;	
+}
+
+.tip.bs {
+	 width: 184px;
+}
+
+.tip.md {
+	 width: 426px;
 }
 
 /* ==========================================================================
@@ -94,8 +158,13 @@ body {
 
 @media only screen and (max-width: 768px) {
 	/* Phones to portrait tablets */
+	.wrapper {
+		width: 90%;
+	}
+	
 	#hero {
 		background-size: 190px;
+		padding-top: 70px;
 	}	
 }
 
