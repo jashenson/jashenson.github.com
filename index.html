@@ -35,19 +35,14 @@
             	</section>
             	<section id="web-presence">
             		<p>
-            			<a href="mailto:jared@jaredshenson.com" title="Email me">&#128319;</a>
-            			<a href="http://www.linkedin.com/in/jaredshenson" class="social" title="Connect on LinkedIn">&#62233;</a>
-            			<a href="http://twitter.com/jashenson" class="social" title="Follow me on Twitter">&#62217;</a>
+            			<a href="mailto:jared@jaredshenson.com" data-title="Email me">&#128319;</a>
+            			<a href="http://www.linkedin.com/in/jaredshenson" class="social" data-title="Connect on LinkedIn">&#62233;</a>
+            			<a href="http://twitter.com/jashenson" class="social" data-title="Follow me on Twitter">&#62217;</a>
             		</p>
+            		<p id="web-presence-title">&nbsp;</p>
             	</section>
             </div> <!-- #main -->
         </div> <!-- #main-container -->
-
-        <div class="footer-container">
-            <footer class="wrapper">
-            	<p>&copy; 2012 Jared Shenson. All Rights Reserved.</p>
-            </footer>
-        </div>
 
 		<script type="text/javascript">
 		
@@ -61,6 +56,23 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		
+		</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script>
+			$(function(){
+				var wpt = $("#web-presence-title");
+				$("#web-presence").on("hover","a", function(){
+					if( wpt.hasClass('visible') )
+					{
+						wpt.removeClass('visible');
+					}
+					else 
+					{
+						var t = $(this).attr('data-title');
+						wpt.text(t).addClass('visible');
+					}
+				});
+			});
 		</script>
     </body>
 </html>
