@@ -11,10 +11,6 @@
     url("../assets/entypo.woff") format("woff");
 } 
 
-/* ==========================================================================
-   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
-   ========================================================================== */
-
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -89,12 +85,12 @@ body {
 
 #me {
 	text-transform: uppercase;
-	font-family: "Glegoo", Helvetica Neue, Helvetica, sans-serif;
+	font-family: "Ubuntu", "Helvetica Neue", Helvetica, sans-serif;
 	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
+	font-weight: 300;
+	font-size: 24px;
 	text-align: center;
-	letter-spacing: 3px;
+	letter-spacing: 2px;
 }
 
 p a {
@@ -103,14 +99,15 @@ p a {
 	padding-bottom: 1px;
 	border-bottom: 1px solid #4a9ef8;
 	
-	-moz-transition: border 0.3s ease-in;
-	-ms-transition: border 0.3s ease-in;
-	-o-transition: border 0.3s ease-in;
-	-webkit-transition: border 0.3s ease-in;
-	transition: border 0.3s ease-in;	
+	-moz-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;	
 }
 p a:hover {
 	border-bottom-color: #b0d6ff;
+	color: #777;
 }
 
 #web-presence p {
