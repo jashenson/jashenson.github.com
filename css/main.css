@@ -85,12 +85,10 @@ body {
 
 #me {
 	text-transform: uppercase;
-	font-family: "Ubuntu", "Helvetica Neue", Helvetica, sans-serif;
-	font-style: normal;
-	font-weight: 300;
+	font-family: "Sorts Mill Goudy", Georgia, serif;
 	font-size: 24px;
 	text-align: center;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 p a {
