@@ -6,14 +6,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Jared Shenson //</title>
+        <title>Jared Shenson // </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
 
-		<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Gentium+Basic' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Gentium+Basic|Gilda+Display" rel="stylesheet" type="text/css">
 
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
         
@@ -25,23 +25,24 @@
         <![endif]-->
 
         <div class="header-container">
-            <header id="hero" class="wrapper clearfix">
-                <h1 id="me">Jared Shenson</h1>
-            </header>
+            <div class="wrapper clearfix">
+                <header id="hero">
+                    <h1 id="me">Jared Shenson</h1>
+                </header>
+            </div>
         </div>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
             	<section id="my-info">
-		            <p>Biologist by <a href="http://yalecollege.yale.edu/" title="B.S. in Biology, Yale College, 2012">training</a>. M.D. in <a href="http://www.mc.vanderbilt.edu" title="M.D. Candidate, Vanderbilt University School of Medicine, 2016">progress</a>. Designer, developer and entrepreneur at the ends of the candle.</p>
+		            <p>Biologist by <a href="http://yalecollege.yale.edu/" title="B.S. in Biology, Yale College, 2012">training</a>. M.D. in <a href="http://www.mc.vanderbilt.edu" title="M.D. Candidate, Vanderbilt University School of Medicine, 2016">progress</a>. Designer, developer and entrepreneur passionate about the intersection of design, technology and medicine.</p>
             	</section>
             	<section id="web-presence">
-            		<p>
-            			<a href="mailto:jared@jaredshenson.com" data-title="Email me">&#128319;</a>
-            			<a href="http://www.linkedin.com/in/jaredshenson" class="social" data-title="Connect on LinkedIn">&#62233;</a>
-            			<a href="http://twitter.com/jashenson" class="social" data-title="Follow me on Twitter">&#62217;</a>
-            		</p>
-            		<p id="web-presence-title">&nbsp;</p>
+            	   <ul>
+            	       <li><a href="mailto:jared@jaredshenson.com">Email</a></li>
+            	       <li><a href="http://www.linkedin.com/in/jaredshenson">LinkedIn</a></li>
+            	       <li><a href="http://twitter.com/jashenson">Twitter</a></li>
+            	   </ul>
             	</section>
             </div> <!-- #main -->
         </div> <!-- #main-container -->
@@ -58,23 +59,6 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 		
-		</script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script>
-			$(function(){
-				var wpt = $("#web-presence-title");
-				$("#web-presence").on("hover","a", function(){
-					if( wpt.hasClass('visible') )
-					{
-						wpt.removeClass('visible');
-					}
-					else 
-					{
-						var t = $(this).attr('data-title');
-						wpt.text(t).addClass('visible');
-					}
-				});
-			});
 		</script>
     </body>
 </html>
