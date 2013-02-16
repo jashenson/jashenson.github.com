@@ -66,6 +66,7 @@ body {
 .header-container {
     background: #7F94B0;
     padding: 70px 0 30px;
+    border-bottom: 1px solid rgb(86, 98, 114);
 }
 
 #hero {
