@@ -1,16 +1,3 @@
-@font-face {
-  font-family: 'Entypo Social';
-  src: url('../assets/entypo-social.eot');
-  src: local('?'),
-    url("../assets/entypo-social.woff") format("woff");
-}
-@font-face {
-  font-family: 'Entypo';
-  src: url('../assets/entypo.eot');
-  src: local('?'),
-    url("../assets/entypo.woff") format("woff");
-} 
-
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -66,7 +53,7 @@ body {
 .header-container {
     background: #7F94B0;
     padding: 70px 0 30px;
-    border-bottom: 1px solid rgb(86, 98, 114);
+    border-bottom: 2px solid rgb(92, 111, 138);
 }
 
 #hero {
