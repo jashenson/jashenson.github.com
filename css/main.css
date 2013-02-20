@@ -13,12 +13,12 @@ textarea {
 }
 
 ::-moz-selection {
-    background: #67A6A6;
+    background: #d2e0f3;
     text-shadow: none;
 }
 
 ::selection {
-    background: #67A6A6;
+    background: #d2e0f3;
     text-shadow: none;
 }
 
