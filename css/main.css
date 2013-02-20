@@ -74,10 +74,10 @@ body {
 
 #me {
 	text-transform: uppercase;
-	font-family: "Gilda Display", Georgia, serif;
-	font-size: 22px;
-	letter-spacing: 2px;
-	font-weight: normal;
+	font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 32px;
+	letter-spacing: 1px;
+	font-weight: 100;
 	margin-bottom: 0;
 	padding-left: 10px;
 	
