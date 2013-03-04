@@ -75,7 +75,7 @@ body {
 #me {
 	text-transform: uppercase;
 	font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 32px;
+	font-size: 29px;
 	letter-spacing: 1px;
 	font-weight: 100;
 	margin-bottom: 0;
@@ -154,20 +154,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
 
 .hidden {
     display: none !important;
