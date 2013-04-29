@@ -51,17 +51,14 @@ body {
 }
 
 .header-container {
-    background: #7F94B0;
-    padding: 70px 0 30px;
-    border-bottom: 2px solid rgb(92, 111, 138);
+    padding: 84px 0 30px;
+    text-align: center;
 }
 
 #hero {
-	background: transparent url(../img/sig_b.png) left top no-repeat;
+	background: transparent url(../img/sig.png) center top no-repeat;
 	background-size: 190px;
 	padding-top: 60px;
-	color: #d2e0f3;
-	margin: 0 0 0 -10px;
 }
 
 .main-container {
@@ -75,11 +72,10 @@ body {
 #me {
 	text-transform: uppercase;
 	font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 29px;
-	letter-spacing: 1px;
-	font-weight: 100;
+	font-size: 30px;
+	letter-spacing: 2px;
+	font-weight: 700;
 	margin-bottom: 0;
-	padding-left: 10px;
 	
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -144,11 +140,9 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
 	/* Apple Retina displays */
-	/*
-#hero {
+    #hero {
 		background-image: url(../img/sig@2x.png);
 	}
-*/
 }
 
 /* ==========================================================================
