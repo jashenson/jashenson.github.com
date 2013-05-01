@@ -71,10 +71,9 @@ body {
 
 #me {
 	text-transform: uppercase;
-	font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 30px;
+	font-family: "Varela Round", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 20px;
 	letter-spacing: 2px;
-	font-weight: 700;
 	margin-bottom: 0;
 	
 	-moz-user-select: none;
