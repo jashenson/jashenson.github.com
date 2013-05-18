@@ -1,0 +1,165 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px / 22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.list {
+    list-style: none;
+    margin-bottom: 100px;
+}
+
+.list li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.list .graph-item:last-child {
+    margin-right: 10px;
+}
+
+.vert-bars .graph-item {
+    float: left;
+    margin-top: 1px;
+    margin-right: 2px;
+    width: 10px;
+    height: 19px;
+    background: transparent url(vert_bars.png) 0px 0px no-repeat;
+}
+
+.vert-bars .evoke {
+    background-position-y: 0px;
+}
+
+.vert-bars .freq {
+    background-position-y: -19px;
+}
+
+.vert-bars .imp {
+    background-position-y: -38px;
+}
+
+.vert-bars .graph-item.s0 {
+    background-position-x: 0px;
+}
+.vert-bars .graph-item.s1 {
+    background-position-x: -10px;
+}
+.vert-bars .graph-item.s2 {
+    background-position-x: -20px;
+}
+.vert-bars .graph-item.s3 {
+    background-position-x: -30px;
+}
+.vert-bars .graph-item.s4 {
+    background-position-x: -40px;
+}
+
+.wedges li {
+    padding-left: 40px;
+}
+
+.wedges .graph-item {
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    background: transparent url(wedges.png) 0px 0px no-repeat;
+}
+
+.wedges .evoke {
+    height: 13px;
+    background-position-y: 0px;
+    top: 0px;
+    left: 6px;
+}
+
+.wedges .freq {
+    background-position-y: -13px;
+    top: 10px;
+    left: 13px;    
+}
+
+.wedges .imp {
+    background-position-y: -27px;
+    top: 10px;
+    left: 0px;    
+}
+
+.wedges .graph-item.s0 {
+    background-position-x: 0px;
+}
+.wedges .graph-item.s1 {
+    background-position-x: -16px;
+}
+.wedges .graph-item.s2 {
+    background-position-x: -32px;
+}
+.wedges .graph-item.s3 {
+    background-position-x: -48px;
+}
+.wedges .graph-item.s4 {
+    background-position-x: -64px;
+}
+
+.donuts .graph-item {
+    float: left;
+    margin-top: 1px;
+    margin-right: 2px;
+    width: 20px;
+    height: 19px;
+    background: transparent url(donuts.png) 0px 0px no-repeat;
+}
+
+.donuts .evoke {
+    background-position-y: 0px;
+}
+
+.donuts .freq {
+    background-position-y: -20px;
+}
+
+.donuts .imp {
+    background-position-y: -40px;
+}
+
+.donuts .graph-item.s0 {
+    background-position-x: 0px;
+}
+.donuts .graph-item.s1 {
+    background-position-x: -20px;
+}
+.donuts .graph-item.s2 {
+    background-position-x: -40px;
+}
+.donuts .graph-item.s3 {
+    background-position-x: -60px;
+}
+.donuts .graph-item.s4 {
+    background-position-x: -80px;
+}
+
+.numbers .graph-item {
+    float: left;
+    margin-top: 1px;
+    margin-right: 4px;
+    padding-top: 2px;
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.numbers .evoke {
+    background: #00A0B0;
+}
+.numbers .freq {
+    background: #CC333F;
+}
+.numbers .imp {
+    background: #DEB323;
+}
