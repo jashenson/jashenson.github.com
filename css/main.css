@@ -9,7 +9,7 @@ button,
 input,
 select,
 textarea {
-    color: #283e50;
+    color: #424254;
 }
 
 ::-moz-selection {
@@ -39,6 +39,13 @@ body {
 	font-weight: 400;    
 }
 
+h1, h2, h3 {
+	text-transform: uppercase;
+	font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
 
 /* ==========================================================================
    Layout
@@ -50,15 +57,13 @@ body {
 	margin: 0 auto;
 }
 
-.header-container {
-    padding: 84px 0 30px;
-    text-align: center;
-}
-
-#hero {
-	background: transparent url(../img/sig.png) center top no-repeat;
-	background-size: 190px;
-	padding-top: 60px;
+#hero-image {
+    background: transparent url(../img/header.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 10em;
 }
 
 .main-container {
@@ -69,12 +74,15 @@ body {
    Styling
    ========================================================================== */
 
+.main header {
+    margin: 1.4em 0;
+}
+
 #me {
-	text-transform: uppercase;
-	font-family: "Varela Round", "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 20px;
-	letter-spacing: 2px;
-	margin-bottom: 0;
+	font-size: 1em;
+	text-align: center;
+	margin: 0;
+	color: rgb(104, 169, 182);
 	
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -85,7 +93,7 @@ a {
 	color: inherit;
 	text-decoration: none;
 	padding-bottom: 1px;
-	border-bottom: 1px solid #3e78a9;
+	border-bottom: 1px solid rgb(104, 169, 182);
 	
 	-moz-transition: all 0.2s ease-in;
 	-ms-transition: all 0.2s ease-in;
@@ -96,19 +104,26 @@ a {
 
 a:hover {
 	border-bottom-color: #b0d6ff;
-	color: #3e78a9;
+	color: rgb(104, 169, 182);
+}
+
+#web-presence {
+    text-align: center;
 }
 
 #web-presence ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: inline-block;
 }
 
 #web-presence li {
     float: left;
     margin-right: 20px;
 }
+
+#web-presence li:last-child { margin-right: 0; }
 
 #web-presence a {
     font-size: 14px;
