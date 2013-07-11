@@ -58,12 +58,12 @@ h1, h2, h3 {
 }
 
 #hero-image {
-    background: transparent url(../img/header.jpg) center center no-repeat;
+    background: transparent url(../img/header.min.jpg) center center no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top: 10em;
+    padding-top: 12em;
 }
 
 .main-container {
