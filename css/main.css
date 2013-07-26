@@ -135,6 +135,10 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
 	/* Phones to portrait tablets */
+	#hero-image {
+    	padding-top: 6px;
+	}
+	
 	.wrapper {
     	padding-left: 20px;
     	padding-right: 30px;
