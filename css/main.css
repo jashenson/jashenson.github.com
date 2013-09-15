@@ -33,17 +33,27 @@ img {
     padding: 0.2em 0;
 }
 
+html {
+    background: white url(../img/fiber.jpg) top left;
+    background-attachment: fixed;
+}
+
 body {
-    font: 24px/44px "Gentium Basic", Georgia, serif;
+    font: 16px/22px "Rosario", Georgia, serif;
 	font-style: normal;
 	font-weight: 400;    
+	color: #1a75ba;
+    -webkit-font-smoothing: antialiased;
+    padding: 10px;	
 }
 
 h1, h2, h3 {
-	text-transform: uppercase;
-	font-family: "Oswald", "Helvetica Neue", Helvetica, sans-serif;
-	font-weight: 300;
-	letter-spacing: 1px;
+	font-weight: 700;
+	color: black;
+}
+
+h1 {
+    font-size: 1.375em;
 }
 
 
@@ -51,23 +61,36 @@ h1, h2, h3 {
    Layout
    ========================================================================== */
 
+.main-container {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    right: 10px;
+    bottom: 0px;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+
 .wrapper {
     width: 100%;
-	max-width: 660px;
-	margin: 0 auto;
-}
-
-#hero-image {
-    background: transparent url(../img/header.min.jpg) center center no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding-top: 12em;
-}
-
-.main-container {
-    padding: 10px 0;
+	max-width: 580px;
+	min-height: 275px;
+	margin: auto;
+	
+	background: transparent url(../img/artwork.svg) left center no-repeat;
+	padding-left: 230px;
 }
 
 /* ==========================================================================
@@ -75,82 +98,90 @@ h1, h2, h3 {
    ========================================================================== */
 
 .main header {
-    margin: 1.4em 0;
+    margin: 80px 0 1em 0;
 }
 
 #me {
-	font-size: 1em;
-	text-align: center;
 	margin: 0;
-	color: rgb(104, 169, 182);
-	
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
+}
+
+#my-info p {
+    font-weight: 700;
 }
 
 a {
-	color: inherit;
+	color: #08507C;
 	text-decoration: none;
-	padding-bottom: 1px;
-	border-bottom: 1px solid rgb(104, 169, 182);
-	
-	-moz-transition: all 0.2s ease-in;
-	-ms-transition: all 0.2s ease-in;
-	-o-transition: all 0.2s ease-in;
-	-webkit-transition: all 0.2s ease-in;
-	transition: all 0.2s ease-in;	
+	border-bottom: 1px dotted;
 }
 
 a:hover {
-	border-bottom-color: #b0d6ff;
-	color: rgb(104, 169, 182);
-}
-
-#web-presence {
-    text-align: center;
+    color: #04293F;
 }
 
 #web-presence ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline-block;
 }
 
-#web-presence li {
-    float: left;
-    margin-right: 20px;
-}
-
-#web-presence li:last-child { margin-right: 0; }
-
-#web-presence a {
+#web-presence li a {
+    display: block;
+    opacity: 0.5;
+    padding: 0.2em 0.5em;
+    margin: 0 0 0.6em -0.5em;
+    max-width: 55%;
+    border: 1px solid #3486C7;
     font-size: 14px;
+    background: transparent url(../img/link.svg) top right no-repeat;
 }
+
+#web-presence li a:hover, #web-presence li a:active {
+    opacity: 1.0;
+}
+
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
 @media only screen and (max-width: 768px) {
+	
+	.wrapper {
+    	background-position: center top;
+    	padding: 290px 10px 10px;
+    	max-width: 360px;
+	}
+	
+	.main header {
+    	margin-top: 1em;
+	}
+	
+	#web-presence li a {
+	   max-width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 630px) {
 	/* Phones to portrait tablets */
-	#hero-image {
-    	padding-top: 6em;
+	body {
+    	padding-top: 20px;
+	}
+	
+	.main-container {
+    	position: static;
+	}
+}
+
+@media only screen and (max-width: 479px) {	
+	body {
+    	padding-top: 30px;
 	}
 	
 	.wrapper {
-    	padding-left: 20px;
-    	padding-right: 30px;
-	}	
-}
-
-@media only screen and (max-width: 1139px) {
-	/* Landscape tablets to desktop */
-}
-
-@media only screen and (min-width: 1140px) {
-	/* Large desktops */
+    	padding: 290px 17px 10px;
+	}
 }
 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
@@ -158,9 +189,6 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
 	/* Apple Retina displays */
-    #hero {
-		background-image: url(../img/sig@2x.png);
-	}
 }
 
 /* ==========================================================================
