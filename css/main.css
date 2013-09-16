@@ -184,8 +184,8 @@ a:hover {
 
 @media only screen and (max-width: 479px) {	
 	.wrapper {
-    	padding: 232px 17px 10px;
-    	background-size: 40%;
+    	padding: 200px 17px 10px;
+    	background-size: 120px;
 	}
 }
 
