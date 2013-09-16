@@ -136,17 +136,20 @@ a:hover {
 
 #web-presence li a {
     display: block;
-    opacity: 0.5;
+    opacity: 0.85;
     padding: 0.2em 0.5em;
-    margin: 0 0 0.6em -0.5em;
+    margin: 0 0 0.6em -0.4em;
     max-width: 55%;
-    border: 1px solid #3486C7;
+    border: 1px solid #1a75ba;
+    color: #1a75ba;
     font-size: 14px;
     background: transparent url(../img/link.svg) top right no-repeat;
 }
 
 #web-presence li a:hover, #web-presence li a:active {
     opacity: 1.0;
+    background-color: #3486C7;
+    color: white;
 }
 
 
@@ -159,6 +162,7 @@ a:hover {
 	.wrapper {
     	background-position: center top;
     	padding: 290px 10px 10px;
+    	margin-top: 20px;
     	max-width: 360px;
 	}
 	
@@ -173,23 +177,15 @@ a:hover {
 }
 
 @media only screen and (max-width: 630px) {
-	/* Phones to portrait tablets */
-	body {
-    	padding-top: 20px;
-	}
-	
 	.main-container {
     	position: static;
 	}
 }
 
 @media only screen and (max-width: 479px) {	
-	body {
-    	padding-top: 30px;
-	}
-	
 	.wrapper {
-    	padding: 290px 17px 10px;
+    	padding: 232px 17px 10px;
+    	background-size: 40%;
 	}
 }
 
