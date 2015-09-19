@@ -41,14 +41,13 @@ html {
 body {
     font: 16px/22px "Rosario", Georgia, serif;
 	font-style: normal;
-	font-weight: 400;    
+	font-weight: 700;
 	color: #1a75ba;
     -webkit-font-smoothing: antialiased;
-    padding: 10px;	
+    padding: 10px;
 }
 
 h1, h2, h3 {
-	font-weight: 700;
 	color: black;
 }
 
@@ -84,11 +83,11 @@ h1 {
 
 
 .wrapper {
-    width: 100%;
-	max-width: 580px;
+   width: 100%;
+	max-width: 650px;
 	min-height: 275px;
 	margin: auto;
-	
+
 	background: transparent url(../img/artwork.svg) left center no-repeat;
 	padding-left: 230px;
 }
@@ -114,8 +113,12 @@ h1 {
 	margin: 0;
 }
 
-#my-info p {
-    font-weight: 700;
+p.nobreak {
+	margin-bottom: 0;
+}
+
+p.nobreak + p {
+	margin-top: 0;
 }
 
 a {
@@ -158,18 +161,18 @@ a:hover {
    ========================================================================== */
 
 @media only screen and (max-width: 768px) {
-	
+
 	.wrapper {
     	background-position: center top;
     	padding: 290px 10px 10px;
     	margin-top: 20px;
     	max-width: 360px;
 	}
-	
+
 	.main header {
     	margin-top: 1em;
 	}
-	
+
 	#web-presence li a {
 	   max-width: 100%;
 	}
@@ -182,7 +185,7 @@ a:hover {
 	}
 }
 
-@media only screen and (max-width: 479px) {	
+@media only screen and (max-width: 479px) {
 	.wrapper {
     	padding: 200px 17px 10px;
     	background-size: 120px;
