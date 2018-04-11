@@ -88,8 +88,15 @@ h1 {
 	min-height: 275px;
 	margin: auto;
 
-	background: transparent url(../img/artwork.svg) left center no-repeat;
+	/*background: transparent url(../img/jshenson.jpg) left center no-repeat;*/
 	padding-left: 230px;
+}
+
+#profilePhoto {
+	 float: left;
+	 margin-top: -44px;
+	 margin-left: -240px;
+	 border-bottom: 6px solid #1a75ba;
 }
 
 #bottom-bar {
@@ -164,7 +171,7 @@ a:hover {
 
 	.wrapper {
     	background-position: center top;
-    	padding: 290px 10px 10px;
+    	padding: 0 10px 10px;
     	margin-top: 20px;
     	max-width: 360px;
 	}
@@ -177,6 +184,12 @@ a:hover {
 	   max-width: 100%;
 	}
 
+	#profilePhoto {
+			float: none;
+			margin-top: 10px;
+			margin-left: 0;
+	}
+
 }
 
 @media only screen and (max-width: 630px) {
@@ -187,7 +200,7 @@ a:hover {
 
 @media only screen and (max-width: 479px) {
 	.wrapper {
-    	padding: 200px 17px 10px;
+    	padding: 0 17px 10px;
     	background-size: 120px;
 	}
 }
